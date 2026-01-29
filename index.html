@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kandarp Raval - Principal Security Architect specializing in DDoS mitigation, Web/API security, and AI-driven security automation">
+    <meta name="description"
+        content="Kandarp Raval - Principal Security Architect specializing in DDoS mitigation, Web/API security, and AI-driven security automation">
     <meta name="keywords" content="Security Architect, DDoS Mitigation, Web Security, AI Security, Akamai">
     <meta name="author" content="Kandarp Raval">
     <title>Kandarp Raval - Principal Security Architect</title>
@@ -80,14 +82,14 @@
         /* About */
         .about-intro {
             color: var(--text-secondary);
-            max-width: 800px;
+            /* max-width: 800px; */
             margin-bottom: 40px;
             font-size: 1.05rem;
         }
 
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
@@ -293,7 +295,7 @@
         /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
@@ -364,6 +366,17 @@
             font-size: 0.85rem;
         }
 
+        .cert-card a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .cert-card a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
         /* Sticky Footer */
         footer {
             position: fixed;
@@ -431,6 +444,11 @@
                 font-size: 1.5rem;
             }
 
+            .about-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
             .project-showcase {
                 padding: 25px 20px;
             }
@@ -451,6 +469,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Hero Section -->
     <header class="hero">
@@ -468,38 +487,58 @@
         <div class="container">
             <h2>About</h2>
             <p class="about-intro">
-                With 10+ years at Akamai Technologies and expertise in designing enterprise-level
-                massively-scaled applications, I've built my career on solving complex security challenges
-                and leading top-class teams. I bring a broad view of how things actually work in companies,
-                not just how they should work.
+                As a Security Architect at Akamai's Global Security Operations Center, my role spans three critical
+                dimensions:
+                directly protecting customers from sophisticated attacks, bridging the gap between product engineering
+                and
+                operational needs, and building next-generation automation platforms that transform how security
+                operations work.
+                From analyzing attack patterns in real-time to architecting AI-driven solutions that save thousands of
+                hours monthly,
+                I work to ensure our security services are both technically excellent and operationally sustainable.
             </p>
 
             <div class="about-grid">
                 <div class="about-card">
-                    <h3>What Drives Me</h3>
+                    <h3>Philosophy</h3>
                     <p>
-                        I hate inefficiency in all things, from computer software to bus schedules.
-                        Efficiency is everything. Soft skills are far more important than hard skills -
-                        technology changes, humans don't.
+                        I believe in honest feedback over comfortable silence. Strive for excellence, but ship working
+                        solutions rather than waiting for perfection that never arrives.
+                        The best engineers aren't specialists in one domain - they're problem solvers who draw from
+                        diverse experiences to find creative solutions.
                     </p>
                 </div>
 
                 <div class="about-card">
-                    <h3>My Approach</h3>
+                    <h3>Security Architect</h3>
                     <p>
-                        I speak my mind, even when it means telling unpalatable truths. "Good enough"
-                        is rarely good enough, but "Perfect" is probably not attainable. Do your best.
-                        When hiring, remember that breadth beats depth every time.
+                        I provide expert consulting and hands-on mitigation support for customers under active attack.
+                        Working with DDoS, web application attacks, and bot-based threats, I analyze traffic patterns,
+                        design custom detection rules, and implement mitigation strategies. I enable and train teams 
+                        and educate customers on evolving attack trends, ensuring they understand both the
+                        threats they face and how to defend against them.
                     </p>
                 </div>
 
                 <div class="about-card">
-                    <h3>What I Do</h3>
+                    <h3>Product Line Expert</h3>
                     <p>
-                        Working with Akamai Technologies, the world's biggest Content Delivery Network,
-                        I design and implement robust security solutions. I'm comfortable working with
-                        everyone from coders to C-level executives, translating technical concepts for
-                        any audience.
+                        Serving as the Global SOCC's product line expert for WAF and Analytics, I bridge the operational
+                        and engineering worlds. I translate frontline requirements into actionable product feedback,
+                        collaborate with engineering teams on feature prioritization, and ensure new capabilities are
+                        designed for real-world serviceability. My role is to make sure the voice of the SOCC shapes
+                        how our security products evolve.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Innovation & Automation</h3>
+                    <p>
+                        I architect and develop solutions that fundamentally improve how the Global SOCC operates.
+                        Leading the development of SOCCSpace, I've built automation platforms that leverage AI to streamline
+                        workflows, eliminate manual processes, and enable the team to scale efficiently. Working with
+                        SOCC leadership, I identify operational bottlenecks and design systems that leverage modern
+                        technologies including LLMs and agentic workflows to solve them.
                     </p>
                 </div>
             </div>
@@ -545,12 +584,17 @@
                 </div>
 
                 <ul class="features-list">
-                    <li>Developed SOCC specific MCP server integrating security tools, databases, and knowledge bases for AI agent access</li>
-                    <li>Built autonomous agents with agentic workflows to analyze DDoS, Web, and API alerts, categorize threats, and recommend mitigations</li>
+                    <li>Developed SOCC specific MCP server integrating security tools, databases, and knowledge bases
+                        for AI agent access</li>
+                    <li>Built autonomous agents with agentic workflows to analyze DDoS, Web, and API alerts, categorize
+                        threats, and recommend mitigations</li>
                     <li>Designed orchestration system for routing user queries to appropriate agents and resources</li>
-                    <li>Automated customer communications and case lifecycle management through intelligent agent decision-making</li>
-                    <li>Integrated with 20+ enterprise data sources via MCP including Salesforce, PostgreSQL, internal APIs, and security tools</li>
-                    <li>Implemented distributed architecture supporting 5 concurrent instances with leader/follower pattern</li>
+                    <li>Automated customer communications and case lifecycle management through intelligent agent
+                        decision-making</li>
+                    <li>Integrated with 20+ enterprise data sources via MCP including Salesforce, PostgreSQL, internal
+                        APIs, and security tools</li>
+                    <li>Implemented distributed architecture supporting 5 concurrent instances with leader/follower
+                        pattern</li>
                 </ul>
 
                 <div class="tech-stack">
@@ -584,11 +628,15 @@
                         <h3>Principal Security Architect</h3>
                         <p class="period">Akamai Technologies | April 2025 - Present</p>
                         <ul>
-                            <li>Designed and developed AI agent platform using Ollama for local LLM hosting with Model Context Protocol (MCP) integration</li>
-                            <li>Built custom MCP server to expose security tools, databases, and APIs as resources for autonomous AI agents</li>
+                            <li>Designed and developed AI agent platform using Ollama for local LLM hosting with Model
+                                Context Protocol (MCP) integration</li>
+                            <li>Built custom MCP server to expose security tools, databases, and APIs as resources for
+                                autonomous AI agents</li>
                             <li>Implemented agentic workflows for complex security analysis tasks</li>
-                            <li>Developed specialized agents for alert triage, mitigation signature generation, and case management automation</li>
-                            <li>Created alert processing pipeline integrating historical attack data and mitigation knowledge for context-aware analysis</li>
+                            <li>Developed specialized agents for alert triage, mitigation signature generation, and case
+                                management automation</li>
+                            <li>Created alert processing pipeline integrating historical attack data and mitigation
+                                knowledge for context-aware analysis</li>
                         </ul>
                     </div>
                 </div>
@@ -598,10 +646,14 @@
                         <h3>Senior Security Architect II</h3>
                         <p class="period">Akamai Technologies | October 2023 - March 2025</p>
                         <ul>
-                            <li>Expanded ecosystem by integrating 20+ enterprise data sources via REST APIs and database connectors</li>
-                            <li>Designed intelligent workflow automations using rule-based agents, saving 1,300+ hours monthly</li>
-                            <li>Built foundation for AI agent integration by implementing modular architecture and MCP-ready interfaces</li>
-                            <li>Developed automated alert categorization workflows analyzing traffic patterns and tagging for prioritization</li>
+                            <li>Expanded ecosystem by integrating 20+ enterprise data sources via REST APIs and database
+                                connectors</li>
+                            <li>Designed intelligent workflow automations using rule-based agents, saving 1,300+ hours
+                                monthly</li>
+                            <li>Built foundation for AI agent integration by implementing modular architecture and
+                                MCP-ready interfaces</li>
+                            <li>Developed automated alert categorization workflows analyzing traffic patterns and
+                                tagging for prioritization</li>
                             <li>Served as WAF and Analytics product line expert for global SOCC</li>
                             <li>Provided expert assistance on complex security cases</li>
                         </ul>
@@ -613,8 +665,10 @@
                         <h3>Senior Security Architect</h3>
                         <p class="period">Akamai Technologies | July 2021 - October 2023</p>
                         <ul>
-                            <li>Spearheaded SOCCSpace ecosystem design, reducing manual efforts by 2,500+ hours/month</li>
-                            <li>Addressed Bot Manager false-negatives through event analysis and tuning recommendations</li>
+                            <li>Spearheaded SOCCSpace ecosystem design, reducing manual efforts by 2,500+ hours/month
+                            </li>
+                            <li>Addressed Bot Manager false-negatives through event analysis and tuning recommendations
+                            </li>
                             <li>Collaborated with external teams on product requirements and business alignment</li>
                             <li>Trained team on advanced mitigation methods for web application and API attacks</li>
                         </ul>
@@ -626,7 +680,8 @@
                         <h3>Security Architect II</h3>
                         <p class="period">Akamai Technologies | October 2019 - June 2021</p>
                         <ul>
-                            <li>Developed web application and Webex bot for DDoS mitigation, improving response times by 50%</li>
+                            <li>Developed web application and Webex bot for DDoS mitigation, improving response times by
+                                50%</li>
                             <li>Built browser extension reducing service incidents from data cross-shares by 99%</li>
                             <li>Redefined SOCC proactive alerting for Managed Security Services</li>
                             <li>Performed WAF event analysis and custom rule development</li>
@@ -640,7 +695,8 @@
                         <p class="period">Akamai Technologies | January 2016 - September 2019</p>
                         <ul>
                             <li>Analyzed and mitigated complex web attacks in real-time</li>
-                            <li>Monitored and responded to DDoS attacks with packet inspection and network troubleshooting</li>
+                            <li>Monitored and responded to DDoS attacks with packet inspection and network
+                                troubleshooting</li>
                             <li>Provisioned customers onto DDoS protection platform during emergencies</li>
                             <li>First-line response and customer communication for security events</li>
                         </ul>
@@ -684,7 +740,6 @@
                     <h3>Development</h3>
                     <ul class="skill-list">
                         <li>Node.js / JavaScript</li>
-                        <li>Python</li>
                         <li>API Development</li>
                         <li>Web App Development</li>
                         <li>Workflow Automation</li>
@@ -725,32 +780,26 @@
             <div class="cert-grid">
                 <div class="cert-card">
                     <h4>Offensive Security Certified Professional (OSCP)</h4>
-                    <p>Advanced penetration testing</p>
+                    <p><a href="https://www.credly.com/badges/079d8841-3503-44bc-86b2-244d0b5f5aee/public_url"
+                            target="_blank">View Credential</a></p>
                 </div>
 
                 <div class="cert-card">
                     <h4>Offensive Security Web Expert (OSWE)</h4>
-                    <p>Advanced web application security</p>
+                    <p><a href="https://www.credly.com/badges/1ac6e7e2-6478-43c2-8f80-b5851929b13f/public_url"
+                            target="_blank">View Credential</a></p>
                 </div>
 
                 <div class="cert-card">
-                    <h4>CCIE Routing and Switching</h4>
-                    <p>Certification #57225</p>
-                </div>
-
-                <div class="cert-card">
-                    <h4>CCNP Routing and Switching</h4>
-                    <p>Professional-level networking</p>
-                </div>
-
-                <div class="cert-card">
-                    <h4>CCNA Security</h4>
-                    <p>Network security fundamentals</p>
+                    <h4>CCIE Routing and Switching (CCIE)</h4>
+                    <p><a href="https://www.credly.com/badges/4c40b3b1-4fad-400a-9fd0-4f88e2c709d0/public_url"
+                            target="_blank">View Credential</a></p>
                 </div>
 
                 <div class="cert-card">
                     <h4>Certified Kubernetes Administrator (CKA)</h4>
-                    <p>In Progress</p>
+                    <p><a href="https://www.credly.com/badges/23a3fd2b-0d12-4168-865d-cadf3c2ad4d6/public_url"
+                            target="_blank">View Credential</a></p>
                 </div>
             </div>
         </div>
@@ -770,4 +819,5 @@
         </div>
     </footer>
 </body>
+
 </html>
